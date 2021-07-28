@@ -34,6 +34,14 @@ const ProjectItem = ({ project }) => {
       <div className={styles['project-item__display']}>
         <ImageDisplay showModal={showModal} thumbnail={project.thumbnail} />
         <div className={styles['project-item__button-container']}>
+          <div className={styles['project-item__tags__container']}>
+            <p className={styles['project-item__tags']}>Built with: </p>{' '}
+            {project.tags.map(tag => (
+              <div key={tag} style={tagStyles}>
+                {tag}
+              </div>
+            ))}
+          </div>
           {project.github && (
             <Button
               url={project.github}
@@ -57,14 +65,14 @@ const ProjectItem = ({ project }) => {
       <p className={styles['project-item__description']}>
         {project.description}
       </p>
-      <div style={{ textAlign: 'center' }}>
+      {/* <div style={{ textAlign: 'center' }}>
         <p className={styles['project-item__tag']}>Built with: </p>{' '}
         {project.tags.map(tag => (
           <p key={tag} style={tagStyles}>
             {tag}
           </p>
         ))}
-      </div>
+      </div> */}
     </div>
   )
 }

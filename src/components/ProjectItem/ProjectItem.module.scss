@@ -2,6 +2,8 @@
   display: block;
   background-color: rgba(3, 41, 57, 1);
   padding: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
   border-radius: 4px;
   width: 88%;
   margin: 0 auto;
@@ -15,12 +17,14 @@
     display: block;
     font-weight: 300;
     color: #2cbadb;
-    padding: 6px;
-    border-bottom: 1px solid #2cbadb;
+    padding-left: 6px;
+    border-left: 3px solid #2cbadb;
     margin: 0 auto;
+    margin-top: 10px;
     margin-bottom: 35px;
-    text-align: center;
-    width: 40%;
+    font-family: 'PT Mono', monospace;
+    // text-align: center;
+    // width: 40%;
     @media (max-width: 590px) {
       margin-bottom: 25px;
       width: 60%;
@@ -28,9 +32,9 @@
   }
   &__display {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
     @media (max-width: 590px) {
       flex-direction: column;
     }
@@ -40,6 +44,12 @@
     display: flex;
     flex-direction: row;
     margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    /* margin-left: 30px; */
+    width: 50%;
+    justify-content: space-around;
+    align-items: flex-end;
     @media (max-width: 625px) {
       margin-left: 10px;
     }
@@ -73,11 +83,11 @@
     height: auto;
   }
   &__description {
-    color: #ffffff;
+    color: #2cbadb;
     margin-top: 20px;
     line-height: 1.4;
-    border-top: 1px solid #ffffff;
-    padding-top: 8px;
+    border-top: 1px solid #2cbadb;
+    padding-top: 10px;
     padding-left: 10px;
     padding-right: 10px;
     font-family: 'PT Mono', monospace;
@@ -85,11 +95,18 @@
       margin-top: 0;
     }
   }
-  &__tag {
-    color: rgba(44, 186, 219, 0.6);
-    text-align: center;
-    font-weight: 300;
+  &__tags {
+    &__container {
+      // display: flex;
+      text-align: end;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+    color: #2cbadb;
+    // text-align: center;
+    // font-weight: 300;
     margin-bottom: 5px;
+    font-size: 1rem;
     font-family: 'PT Mono', monospace;
     @media (max-width: 590px) {
       display: block;
