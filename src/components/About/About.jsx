@@ -71,7 +71,7 @@ const About = () => {
             <div>
               <p>
                 I am a Full Stack Software Engineer who loves to code and build
-                things, located in Minneapolis, MN. I enjoy turning concepts and
+                things, located in Houston, TX. I enjoy turning concepts and
                 designs into front end UI and solving complex problems with
                 code.
               </p>

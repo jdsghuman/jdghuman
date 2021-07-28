@@ -1,12 +1,12 @@
 .btn {
   border: 1px solid #2cbadb;
-  font-size: .8rem;
+  font-size: 0.8rem;
   color: #2cbadb;
   padding: 8px 12px;
   cursor: pointer;
   transform: translateY(-24%);
   font-family: 'PT Mono', monospace;
-  transition: .2s all linear;
+  transition: 0.2s all linear;
   letter-spacing: 1.5px;
   border-radius: 2px;
   font-size: 1rem;
@@ -14,7 +14,7 @@
 }
 
 .btn:hover {
-  background-color: rgba(44, 186, 219, .1);
+  background-color: rgba(44, 186, 219, 0.1);
 }
 
 .btn__project {
@@ -23,7 +23,7 @@
   border: 2px solid #2cbadb;
   padding: 9px 14px;
   font-size: 1rem;
-  align-self: center;
+  /* align-self: center; */
 }
 
 .btn__home {
