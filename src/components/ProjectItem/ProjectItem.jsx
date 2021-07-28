@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
-import className from 'classnames/bind'
-import Button from '../Button/Button'
+import { DiGithubBadge } from 'react-icons/di'
+import { FiExternalLink } from 'react-icons/fi'
+// import Button from '../Button/Button'
 import ImageDisplay from './ImageDisplay/ImageDisplay'
 import styles from './ProjectItem.module.scss'
 import ModalDisplay from '../Shared/ModalDisplay/ModalDisplay'
-
-const cx = className.bind(styles)
 
 const tagStyles = {
   display: 'inline-block',
@@ -34,6 +33,18 @@ const ProjectItem = ({ project }) => {
       <div className={styles['project-item__display']}>
         <ImageDisplay showModal={showModal} thumbnail={project.thumbnail} />
         <div className={styles['project-item__button-container']}>
+          <div className={styles.links}>
+            {project?.website && (
+              <a href={project.website} target="_new">
+                <FiExternalLink color="#2cbadb" size="2.5rem" />
+              </a>
+            )}
+            {project?.github && (
+              <a href={project.github} target="_new">
+                <DiGithubBadge color="#2cbadb" size="3rem" />
+              </a>
+            )}
+          </div>
           <div className={styles['project-item__tags__container']}>
             <p className={styles['project-item__tags']}>Built with: </p>{' '}
             {project.tags.map(tag => (
@@ -42,21 +53,6 @@ const ProjectItem = ({ project }) => {
               </div>
             ))}
           </div>
-          {project.github && (
-            <Button
-              url={project.github}
-              classes={cx('btn btn__project', {
-                btn__private: project.privateRepo,
-              })}
-            >
-              {project.privateRepo ? 'Private Repo' : 'GitHub'}
-            </Button>
-          )}
-          {project.website && (
-            <Button url={project.website} classes="btn btn__project">
-              {project.name}
-            </Button>
-          )}
         </div>
         <ModalDisplay isOpen={showImage} closeModal={closeModal}>
           <img className="img-modal" src={project.thumbnail} alt="" />
@@ -65,14 +61,6 @@ const ProjectItem = ({ project }) => {
       <p className={styles['project-item__description']}>
         {project.description}
       </p>
-      {/* <div style={{ textAlign: 'center' }}>
-        <p className={styles['project-item__tag']}>Built with: </p>{' '}
-        {project.tags.map(tag => (
-          <p key={tag} style={tagStyles}>
-            {tag}
-          </p>
-        ))}
-      </div> */}
     </div>
   )
 }

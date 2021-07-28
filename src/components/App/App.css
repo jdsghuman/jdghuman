@@ -23,7 +23,7 @@
   margin-right: auto;
   padding-left: 0;
   padding-right: 0;
-  transition: all .3s ease-out;
+  transition: all 0.3s ease-out;
 }
 
 section {
@@ -31,7 +31,7 @@ section {
 }
 
 .img-modal {
-  width: 500px;
+  width: 600px;
   max-width: 100%;
   height: auto;
 }
